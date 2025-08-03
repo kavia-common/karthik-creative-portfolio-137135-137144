@@ -47,7 +47,7 @@ function App() {
   };
 
   useEffect(() => {
-    document.body.setAttribute("data-theme", "dark");
+    document.body.setAttribute("data-theme", "light");
   }, []);
 
   return (

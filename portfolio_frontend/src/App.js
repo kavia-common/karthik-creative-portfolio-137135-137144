@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import AnimatedBackground from "./components/AnimatedBackground";
+import ThreeJSBackground from "./components/ThreeJSBackground";
 import Introduction from "./components/Introduction";
 import Expertise from "./components/Expertise";
 import SkillsTimeline from "./components/SkillsTimeline";
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="main-root">
-      <AnimatedBackground />
+      <ThreeJSBackground />
       <Navbar onNavigate={scrollToSection} />
       <section ref={introRef} id="introduction">
         <Introduction onContactClick={() => scrollToSection("contact")} />

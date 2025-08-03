@@ -7,3 +7,4 @@ export { default as ProjectsShowcase } from "./ProjectsShowcase";
 export { default as RateSection } from "./RateSection";
 export { default as ContactSection } from "./ContactSection";
 export { default as Footer } from "./Footer";
+export { default as ThreeJSBackground } from "./ThreeJSBackground";

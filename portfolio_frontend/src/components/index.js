@@ -1,0 +1,9 @@
+export { default as Navbar } from "./Navbar";
+export { default as AnimatedBackground } from "./AnimatedBackground";
+export { default as Introduction } from "./Introduction";
+export { default as Expertise } from "./Expertise";
+export { default as SkillsTimeline } from "./SkillsTimeline";
+export { default as ProjectsShowcase } from "./ProjectsShowcase";
+export { default as RateSection } from "./RateSection";
+export { default as ContactSection } from "./ContactSection";
+export { default as Footer } from "./Footer";

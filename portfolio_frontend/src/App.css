@@ -1,8 +1,9 @@
 /* Root Dark Theme Colors */
 :root, [data-theme='dark'] {
-  --primary: #023e8a;
-  --secondary: #ffb703;
-  --accent: #fb8500;
+  --primary: #4285F4;      /* Blue (Material) */
+  --secondary: #EA4335;    /* Red (Material) */
+  --accent: #FBBC05;       /* Yellow (Material) */
+  --success: #34A853;      /* Green (Material) - add as an extra if needed */
   --text: #fff;
   --text-secondary: #b6b6b6;
   --border: #232840;
@@ -61,10 +62,10 @@ section {
 }
 
 .navbar-title {
-  color: var(--secondary);
+  color: var(--primary);
   font-weight: 800;
   font-size: 2rem;
-  text-shadow: 0 1px 24px var(--primary), 0 0 5px #0008;
+  text-shadow: 0 1px 24px var(--accent), 0 0 5px #0008;
   letter-spacing: 1px;
   cursor: pointer;
 }
@@ -91,9 +92,9 @@ section {
   transition: background 0.135s, color 0.135s, box-shadow 0.2s;
 }
 .navbar-link:hover, .navbar-link.active {
-  background: var(--accent);
+  background: var(--primary);
   color: #fff;
-  box-shadow: 0 0 16px 0 var(--accent);
+  box-shadow: 0 0 16px 0 var(--primary);
 }
 
 /* AnimatedBackground */
@@ -121,7 +122,7 @@ section {
 .intro-title {
   font-size: 3rem;
   font-weight: 900;
-  background: linear-gradient(90deg, var(--primary) 30%, var(--secondary) 70%);
+  background: linear-gradient(90deg, var(--primary) 25%, var(--secondary) 45%, var(--accent) 75%, var(--success) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -148,7 +149,7 @@ section {
 }
 .intro-btn {
   margin-top: 1.3rem;
-  background: var(--accent);
+  background: var(--secondary);
   color: #fff;
   border: none;
   border-radius: 2rem;
@@ -157,13 +158,13 @@ section {
   font-weight: 700;
   letter-spacing: 0.08em;
   cursor: pointer;
-  box-shadow: 0 0 18px 0 var(--accent);
+  box-shadow: 0 0 18px 0 var(--secondary);
   transition: background 0.22s, box-shadow 0.22s, transform 0.16s;
   animation: fadeInUp 1.4s 0.4s both;
 }
 .intro-btn:hover {
   background: var(--primary);
-  color: var(--secondary);
+  color: var(--accent);
   box-shadow: 0 1px 32px 0 var(--primary);
   transform: scale(1.04);
 }
@@ -177,13 +178,13 @@ section {
   animation: fadeIn 1.9s 0.5s both;
 }
 .social-link {
-  color: var(--accent);
+  color: var(--primary);
   font-size: 2.2rem;
   transition: color 0.22s, transform 0.16s;
   filter: drop-shadow(0 0 16px var(--primary) 20%);
 }
 .social-link:hover {
-  color: var(--secondary);
+  color: var(--success);
   transform: translateY(-2px) scale(1.12);
 }
 
@@ -201,7 +202,7 @@ section {
 
 .expertise-title {
   font-size: 2.1rem;
-  color: var(--primary);
+  color: var(--accent);
   font-weight: 800;
   margin-bottom: 1.7rem;
   letter-spacing: 0.05em;
@@ -228,7 +229,7 @@ section {
   text-align: center;
   letter-spacing: 0.04em;
   margin-bottom: 12px;
-  border-left: 5px solid var(--accent);
+  border-left: 5px solid var(--success);
   transition: transform 0.18s, box-shadow 0.18s;
   animation: cardFadeIn 1s both;
 }
@@ -258,7 +259,7 @@ section {
   z-index: 1;
 }
 .skills-timeline-title {
-  color: var(--secondary);
+  color: var(--primary);
   font-size: 2rem;
   text-align: center;
   font-weight: 800;
@@ -284,7 +285,7 @@ section {
   width: 19px;
   height: 19px;
   background: var(--accent);
-  border: 3px solid var(--primary);
+  border: 3px solid var(--secondary);
   border-radius: 50%;
   position: absolute;
   left: -39px;
@@ -293,7 +294,7 @@ section {
   transition: box-shadow 0.19s;
 }
 .timeline-dot:hover {
-  box-shadow: 0 1px 16px var(--accent)55;
+  box-shadow: 0 1px 16px var(--primary)55;
 }
 .timeline-content {
   background: var(--card);
@@ -336,7 +337,7 @@ section {
   align-items: center;
 }
 .projects-title {
-  color: var(--primary);
+  color: var(--accent);
   font-size: 2rem;
   text-align: center;
   font-weight: 800;
@@ -372,7 +373,7 @@ section {
 }
 .project-card:hover {
   transform: scale(1.018) translateY(-3px);
-  box-shadow: 0 6px 36px 0 var(--accent)30;
+  box-shadow: 0 6px 36px 0 var(--success)30;
 }
 .project-image {
   width: 100%;
@@ -394,7 +395,7 @@ section {
   padding: 1.1rem 1.15rem 1.35rem 1.15rem;
 }
 .project-title {
-  color: var(--secondary);
+  color: var(--accent);
   font-size: 1.19rem;
   font-weight: 700;
   margin-bottom: 0.14rem;
@@ -409,6 +410,12 @@ section {
   gap: 0.9rem;
   margin-top: 0.8rem;
 }
+.project-links a {
+  color: var(--success);
+}
+.project-links a:hover {
+  color: var(--primary);
+}
 
 /* Rate Section */
 .rate-section {
@@ -421,19 +428,19 @@ section {
   z-index: 10;
 }
 .rate-badge {
-  background: linear-gradient(90deg, var(--accent) 0%, var(--secondary) 100%);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
   color: #fff;
   font-size: 2.5rem;
   font-weight: 900;
   padding: 1.2rem 3.2rem;
   border-radius: 49px;
-  box-shadow: 0 0 30px 3px var(--accent)33;
+  box-shadow: 0 0 30px 3px var(--primary)33;
   margin-bottom: 1.35rem;
   transform: scale(0.97);
   animation: pulseBadge 2.4s infinite linear alternate;
 }
 .rate-section-desc {
-  color: var(--primary);
+  color: var(--success);
   font-size: 1.12rem;
   text-align: center;
   line-height: 1.4;
@@ -459,7 +466,7 @@ section {
   position: relative;
 }
 .contact-title {
-  color: var(--accent);
+  color: var(--secondary);
   font-size: 1.68rem;
   font-weight: 700;
   margin-bottom: 1.1rem;
@@ -482,11 +489,11 @@ section {
   resize: none;
 }
 .contact-form input:focus, .contact-form textarea:focus {
-  border-color: var(--primary);
+  border-color: var(--success);
   background: #181c2b;
 }
 .contact-form button {
-  background: var(--primary);
+  background: var(--accent);
   color: #fff;
   border: none;
   border-radius: 14px;
@@ -495,24 +502,24 @@ section {
   padding: 1rem 0;
   cursor: pointer;
   margin-top: 0.6rem;
-  box-shadow: 0 2px 16px 0 var(--primary)45;
+  box-shadow: 0 2px 16px 0 var(--accent)45;
   transition: background 0.13s, box-shadow 0.16s, transform 0.13s;
 }
 .contact-form button:hover {
-  background: var(--accent);
-  color: var(--secondary);
+  background: var(--secondary);
+  color: var(--primary);
   transform: scale(1.03);
-  box-shadow: 0 3px 18px 2px var(--accent)45;
+  box-shadow: 0 3px 18px 2px var(--secondary)45;
 }
 .contact-success {
-  color: #77ff99;
+  color: var(--success);
   font-weight: 700;
   text-align: center;
   padding: 0.7rem 0;
   font-size: 1.12rem;
 }
 .contact-error {
-  color: #ff6493;
+  color: var(--secondary);
   font-weight: 700;
   text-align: center;
   padding: 0.7rem 0;
